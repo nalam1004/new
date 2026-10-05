@@ -16,7 +16,8 @@ small script to fill in the project/client boilerplate automatically.
   project — those comments don't render/print in most Markdown viewers.
 - `scripts/generate_report.py` — prompts for the core project fields
   (project name, type, address, client, firm, report number, date) and
-  writes a filled-in copy to `output/<project-slug>_report.md`.
+  writes a filled-in copy to `output/<project-slug>_report.md` (created
+  next to wherever the script is run from).
 
 ## Usage
 
@@ -26,6 +27,11 @@ small script to fill in the project/client boilerplate automatically.
    python3 scripts/generate_report.py
    ```
 
+   The script looks for `geotechnical_report_template.md` next to
+   itself, in a `template/` subfolder, or in a sibling `template/`
+   folder — so it works whether you cloned this repo or just downloaded
+   the template and script into one flat folder (e.g. from Google
+   Drive).
 2. Answer the prompts (press Enter to leave any field blank — the
    placeholder stays in the output for you to fill in later).
 3. Open the generated file in `output/` and fill in the remaining
